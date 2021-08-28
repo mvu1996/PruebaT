@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const express_1 = require("express"); //router es un objeto para las rutas
+const express_2 = require("express"); //router es un objeto para las rutas
 const indexControler_1 = require("../controllers/indexControler");
 class IndexRoutes {
     //ejecutar metodo config
     constructor() {
-        this.router = (0, express_1.Router)();
+        this.router = (0, express_2.Router)();
         this.config();
     }
     config() {

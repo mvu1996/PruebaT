@@ -1,8 +1,8 @@
 import { Router } from 'express';//router es un objeto para las rutas
 
-import  { indexController } from '../controllers/indexControler';
+import  { queryController } from '../controllers/queryController';
 
-class IndexRoutes {
+class QueryRoutes {
 
     public router:  Router = Router();
 
@@ -12,9 +12,9 @@ class IndexRoutes {
     }
 
     config(): void {
-        this.router.get('/', indexController.index);
+        this.router.get('/', queryController.index);
     }
 }
 //instancia clase
-const indexRoutes = new IndexRoutes();
-export default indexRoutes.router;
+const queryRoutes = new QueryRoutes();
+export default queryRoutes.router;
