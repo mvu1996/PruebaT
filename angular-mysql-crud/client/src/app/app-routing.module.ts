@@ -8,7 +8,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'games',
+    path: 'ingresos',
     component: FormListComponent,
 
   }
