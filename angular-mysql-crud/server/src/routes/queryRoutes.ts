@@ -12,7 +12,7 @@ class QueryRoutes {
     }
 
     config() {
-        this.router.get('/', queryController.index);
+        this.router.get('/', queryController.list);
     }
 }
 //instancia clase

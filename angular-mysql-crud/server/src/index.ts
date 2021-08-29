@@ -1,6 +1,6 @@
 import express, { Application } from 'express';
 import indexRoutes from './routes/indexRoutes';
-// import queryRoutes from './routes/queryRoutes';
+import queryRoutes from './routes/queryRoutes';
 import morgan from 'morgan';
 import cors from 'cors';
 class Server {
@@ -26,7 +26,7 @@ class Server {
     //metodo para definir rutas de mi servidor
     routes(): void {
         this.app.use(indexRoutes);
-        // this.app.use('/api/query', queryRoutes);
+        this.app.use('/api/query', queryRoutes);
     }
 
     //metodo inicializar el seervidor(app.listen)
