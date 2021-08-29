@@ -6,6 +6,7 @@ class QueryController {
         await pool.query(`SELECT p.pedido_id,p.cantidadPiezas,tc.tipoTaza_id, tc.nombre AS tipotaza FROM pedido p
         LEFT JOIN tipotaza tc ON tc.tipoTaza_id = p.tipoTaza_id`, function(err, result, fields) {
             if (err) throw err;
+            res.json(result);
         });
     }
 

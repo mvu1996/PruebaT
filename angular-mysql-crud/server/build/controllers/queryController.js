@@ -20,6 +20,7 @@ class QueryController {
         LEFT JOIN tipotaza tc ON tc.tipoTaza_id = p.tipoTaza_id`, function (err, result, fields) {
                 if (err)
                     throw err;
+                res.json(result);
             });
         });
     }
