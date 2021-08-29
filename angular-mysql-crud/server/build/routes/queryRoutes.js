@@ -12,8 +12,9 @@ class QueryRoutes {
         this.config();
     }
     config() {
-        this.router.get('/', queryController_1.default.list);
+        this.router.get('/get', queryController_1.default.list);
         this.router.post('/create', queryController_1.default.create);
+        this.router.post('/createPedido', queryController_1.default.createPedido);
     }
 }
 //instancia clase

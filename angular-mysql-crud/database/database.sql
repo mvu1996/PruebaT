@@ -21,9 +21,9 @@ CREATE TABLE almacen(
 
 
 
-CREATE TABLE PEDIDO (
+CREATE TABLE pedido (
     pedido_id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    TotalPedido INT(11) NOT NULL,
+    cantidadPiezas INT(11) NOT NULL,
     create_at TIMESTAMP DEFAULT  CURRENT_TIMESTAMP,
     tipoTaza_id INT NOT NULL,
     FOREIGN KEY (tipoTaza_id) REFERENCES tipoTaza(tipoTaza_id)

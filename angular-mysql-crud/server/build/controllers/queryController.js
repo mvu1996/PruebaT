@@ -16,10 +16,10 @@ const database_1 = __importDefault(require("../database"));
 class QueryController {
     list(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            yield database_1.default.query('SELECT * FROM tipotaza', function (err, result, fields) {
+            yield database_1.default.query(`SELECT p.pedido_id,p.cantidadPiezas,tc.tipoTaza_id, tc.nombre AS tipotaza FROM pedido p
+        LEFT JOIN tipotaza tc ON tc.tipoTaza_id = p.tipoTaza_id`, function (err, result, fields) {
                 if (err)
                     throw err;
-                res.json(result);
             });
         });
     }
@@ -27,6 +27,12 @@ class QueryController {
         return __awaiter(this, void 0, void 0, function* () {
             console.log(req.body);
             yield database_1.default.query("INSERT INTO almacen set ?", [req.body]);
+            res.json({ message: 'datos insertados' });
+        });
+    }
+    createPedido(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield database_1.default.query("INSERT INTO pedido set ?", [req.body]);
             res.json({ message: 'datos insertados' });
         });
     }
