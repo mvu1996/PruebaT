@@ -1,8 +1,10 @@
 import {Request,Response} from 'express';
-class QueryController {
 
-   index(req: Request, res: Response){
-    res.send("INDEX QUERY")
-   } 
+import pool from '../database';
+class QueryController {
+    public index (req: Request, res: Response){
+        pool.query('Describe almacen')
+    }
 }
-export const queryController = new QueryController();
+const queryController = new QueryController;
+export default queryController;

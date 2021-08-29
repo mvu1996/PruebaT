@@ -1,13 +1,12 @@
-//conexion
-import {Request,Response} from 'express';
-import { Connection, createPool } from "promise-mysql";
-import keys from "./keys";
-//conectar a base de datos
+import mysql from 'mysql';
 
-export async function connect(req: Request, res: Response){
-    const connection = createPool(keys.dataase);
-    res.send("CONECTADO")
-    return connection;
-    
-}
+import keys from './keys';
 
+const pool = mysql.createPool(keys.dataase);
+pool.getConnection((err, connection) => {
+    if (err) throw err;
+    connection.release();
+    console.log('DB is connected');
+})
+
+export default pool;

@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express"); //router es un objeto para las rutas
-const indexControler_1 = require("../controllers/indexControler");
+const indexController_1 = require("../controllers/indexController");
 class IndexRoutes {
     //ejecutar metodo config
     constructor() {
@@ -9,9 +9,8 @@ class IndexRoutes {
         this.config();
     }
     config() {
-        this.router.get('/', indexControler_1.indexController.index);
+        this.router.get('/', indexController_1.indexController.index);
     }
 }
 //instancia clase
-const indexRoutes = new IndexRoutes();
-exports.default = indexRoutes.router;
+exports.default = new IndexRoutes().router;

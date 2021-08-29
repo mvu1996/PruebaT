@@ -1,7 +1,10 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-const express_1 = require("express"); //router es un objeto para las rutas
-const queryController_1 = require("../controllers/queryController");
+const express_1 = require("express");
+const queryController_1 = __importDefault(require("../controllers/queryController"));
 class QueryRoutes {
     //ejecutar metodo config
     constructor() {
@@ -9,9 +12,8 @@ class QueryRoutes {
         this.config();
     }
     config() {
-        this.router.get('/', queryController_1.queryController.index);
+        this.router.get('/', queryController_1.default.index);
     }
 }
 //instancia clase
-const queryRoutes = new QueryRoutes();
-exports.default = queryRoutes.router;
+exports.default = new QueryRoutes().router;

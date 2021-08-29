@@ -6,4 +6,4 @@ class IndexController {
     res.send("Hello")
    } 
 }
-export const indexController = new IndexController();
+export const indexController = new IndexController(); 

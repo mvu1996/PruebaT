@@ -1,6 +1,6 @@
 import { Router } from 'express';//router es un objeto para las rutas
 
-import  { indexController } from '../controllers/indexControler';
+import  { indexController } from '../controllers/indexController';
 
 class IndexRoutes {
 
@@ -16,5 +16,4 @@ class IndexRoutes {
     }
 }
 //instancia clase
-const indexRoutes = new IndexRoutes();
-export default indexRoutes.router;
+export default new IndexRoutes().router;
