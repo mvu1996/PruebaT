@@ -10,7 +10,8 @@ class QueryController {
     }
 
     public async create(req: Request, res: Response): Promise<void> {
-        await pool.query("INSERT INTO tipotaza set ?", [req.body]);
+         console.log(req.body)
+        await pool.query("INSERT INTO almacen set ?", [req.body]);
         res.json({ message: 'datos insertados' });
     }
 }
