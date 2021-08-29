@@ -1,9 +1,28 @@
 import { Injectable } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 
+import {taza} from '../models/tazas'
 @Injectable({
   providedIn: 'root'
 })
 export class TazasService {
 
-  constructor() { }
+  API_URI = 'http://localhost:3000/api/query'
+  constructor(private http:HttpClient ) {}
+
+  
+  getTazas() {
+    return this.http.get(`${this.API_URI}/get`)
+  }
+  getTazasBG(id: string){
+    return this.http.get(`${this.API_URI}/taza/${id}`)
+  }
+
+  saveTaza(taza: taza){
+    return this.http.post(`${this.API_URI}/taza`, taza)
+  }
+
+  deleteTaza(id: string){
+    return this.http.delete(`${this.API_URI}/taza/${id}`);
+  }
 }

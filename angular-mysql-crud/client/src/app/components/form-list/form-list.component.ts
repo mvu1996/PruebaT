@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import {TazasService} from "../../services/tazas.service";
 @Component({
   selector: 'app-form-list',
   templateUrl: './form-list.component.html',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private tazaServices: TazasService) { }
 
   ngOnInit(): void {
+    this.tazaServices.getTazas().subscribe(
+      res => console.log(res),
+      err => console.error(err)
+    );
   }
 
 }
