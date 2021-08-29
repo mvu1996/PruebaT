@@ -19,7 +19,7 @@ export class TazasService {
   }
 
   saveTaza(taza: almacen){
-    return this.http.post(`${this.API_URI}/createPedido`, taza)
+    return this.http.post(`${this.API_URI}/taza`, taza)
   }
 
   deleteTaza(id: string){

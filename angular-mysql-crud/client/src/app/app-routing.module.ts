@@ -5,7 +5,7 @@ import {FormListComponent} from "./components/form-list/form-list.component"
 const routes: Routes = [
   {
     path:'',
-    redirectTo:'/ingresos',
+    redirectTo:'/egresos',
     pathMatch: 'full'
   },
   {
