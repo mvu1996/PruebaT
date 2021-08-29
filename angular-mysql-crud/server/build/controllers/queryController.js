@@ -25,7 +25,7 @@ class QueryController {
     }
     create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const result = yield database_1.default.query('INSERT INTO tipotazas set ?', [req.body]);
+            yield database_1.default.query("INSERT INTO tipotaza set ?", [req.body]);
             res.json({ message: 'datos insertados' });
         });
     }
