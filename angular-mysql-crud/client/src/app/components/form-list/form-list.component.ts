@@ -7,12 +7,12 @@ import {TazasService} from "../../services/tazas.service";
   styleUrls: ['./form-list.component.css']
 })
 export class FormListComponent implements OnInit {
-
+ tazav : any = [];
   constructor(private tazaServices: TazasService) { }
 
   ngOnInit(): void {
     this.tazaServices.getTazas().subscribe(
-      res => console.log(res),
+      res => this.tazav = res,
       err => console.error(err)
     );
   }

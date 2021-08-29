@@ -1,0 +1,98 @@
+{
+	"id": "e2aac6a1-3ef4-4569-ef4d-10b51efce59f",
+	"name": "pruebaApis",
+	"description": "",
+	"order": [
+		"990c1e8d-41cd-5520-88b7-4c37f4d546a9",
+		"16b21535-28fc-7726-e02e-a4621c6c60b4",
+		"5e869db8-4e6e-db60-6c41-a32322fb0815"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1630206340231,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "16b21535-28fc-7726-e02e-a4621c6c60b4",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{localhost}}/createPedido",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1630209028585,
+			"name": "{{localhost}}/createPedido",
+			"description": "",
+			"collectionId": "e2aac6a1-3ef4-4569-ef4d-10b51efce59f",
+			"responses": [],
+			"rawModeData": "{\r\n\t\"cantidadPiezas\": 250,\r\n\t\"create_at\": \"2021-08-28 22:04:41.000000\",\r\n\t\"tipoTaza_id\": 1\r\n\t\r\n}"
+		},
+		{
+			"id": "5e869db8-4e6e-db60-6c41-a32322fb0815",
+			"headers": "",
+			"headerData": [],
+			"url": "{{localhost}}/get",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "e2aac6a1-3ef4-4569-ef4d-10b51efce59f",
+			"data": null,
+			"dataMode": "params",
+			"name": "{{localhost}}/get",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1630210415240,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "990c1e8d-41cd-5520-88b7-4c37f4d546a9",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{localhost}}/create",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1630208570256,
+			"name": "{{localhost}}/create",
+			"description": "",
+			"collectionId": "e2aac6a1-3ef4-4569-ef4d-10b51efce59f",
+			"responses": [],
+			"rawModeData": "{\n\t\"color\" : \"blanca\",\n\t\"dimensiones\": \"15\",\n\t\"capacidad\": \"250\",\n\t\"modelo\":\"Flores amarillas\",\n\t\"material\": \"Porcelana\",\n\t\"create_at\": \"2021-08-28 22:04:41.000000\",\n\t\"tipoTaza_id\": 1\n\t\n}"
+		}
+	]
+}

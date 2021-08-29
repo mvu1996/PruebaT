@@ -1,4 +1,4 @@
-export interface taza{
+export interface almacen{
     taza_id?: number;
     color?:string;
     dimensiones?: number;

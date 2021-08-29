@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 
-import {taza} from '../models/tazas'
+import {almacen} from '../models/tazas'
 @Injectable({
   providedIn: 'root'
 })
@@ -15,11 +15,11 @@ export class TazasService {
     return this.http.get(`${this.API_URI}/get`)
   }
   getTazasBG(id: string){
-    return this.http.get(`${this.API_URI}/taza/${id}`)
+    return this.http.get(`${this.API_URI}/get${id}`)
   }
 
-  saveTaza(taza: taza){
-    return this.http.post(`${this.API_URI}/taza`, taza)
+  saveTaza(taza: almacen){
+    return this.http.post(`${this.API_URI}/createPedido`, taza)
   }
 
   deleteTaza(id: string){
