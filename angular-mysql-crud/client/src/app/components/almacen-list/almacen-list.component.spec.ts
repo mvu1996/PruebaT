@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormListComponent } from './form-list.component';
+import { AlmacenListComponent } from './almacen-list.component';
 
-describe('FormListComponent', () => {
-  let component: FormListComponent;
-  let fixture: ComponentFixture<FormListComponent>;
+describe('AlmacenListComponent', () => {
+  let component: AlmacenListComponent;
+  let fixture: ComponentFixture<AlmacenListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FormListComponent ]
+      declarations: [ AlmacenListComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FormListComponent);
+    fixture = TestBed.createComponent(AlmacenListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
