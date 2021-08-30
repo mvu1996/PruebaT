@@ -1,11 +1,22 @@
 <div class="col-md-4" *ngFor ="let taza of tazasA">
-    <!--generar un cuerpo para cada una-->
-    <div class="card text-center">
-        <div class="card-header">
-            {{taza.tipotaza}}
-        </div>
-    </div>
-    <div class="card-body">
-
-    </div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Numero pedido</th>
+            <th scope="col">Cantidad Piezas</th>
+            <th scope="col">tipoTaza_id</th>
+            <th scope="col">TipoTaza</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>{{taza.pedido_id}}</td>
+            <td>{{taza.cantidadPiezas}}</td>
+            <td>{{taza.tipoTaza_id}}</td>
+            <td>{{taza.tipotaza}}</td>
+          </tr>
+        </tbody>
+      </table>
 </div>
