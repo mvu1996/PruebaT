@@ -7,13 +7,16 @@ import {TazasService} from '../../services/tazas.service'
   styleUrls: ['./almacen-list.component.css']
 })
 export class AlmacenListComponent implements OnInit {
-
+//almacenar respuesta
+tazasA: any = []
   constructor(private tazasServices:TazasService) { }
 
 
   ngOnInit() {
     this.tazasServices.getAlmacen().subscribe(
-      res => console.log(res),
+      res => {
+        this.tazasA = res;
+      },
       err => console.error(err)
     );
   }
