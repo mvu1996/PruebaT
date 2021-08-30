@@ -1,7 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [];
+import {AlmacenListComponent} from "./components/almacen-list/almacen-list.component"
+const routes: Routes = [
+  {
+    path:'',//ruta inicial
+    redirectTo: '/ingresos',
+    pathMatch:'full'
+  },
+  {
+    path: 'ingresos',
+    component: AlmacenListComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
