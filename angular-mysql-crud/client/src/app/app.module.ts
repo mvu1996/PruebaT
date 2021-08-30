@@ -7,6 +7,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { AlmacenListComponent } from './components/almacen-list/almacen-list.component';
 import { AlmacenFormComponent } from './components/almacen-form/almacen-form.component';
 
+import {TazasService} from './services/tazas.service'
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,10 @@ import { AlmacenFormComponent } from './components/almacen-form/almacen-form.com
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    TazasService
+  ],
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }
