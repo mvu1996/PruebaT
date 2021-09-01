@@ -1,5 +1,5 @@
 <div class="col-md-4" *ngFor ="let taza of tazasA">
-    <table class="table">
+    <table class="table table-striped">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -12,7 +12,8 @@
         <tbody>
           <tr>
             <th scope="row">1</th>
-            <td>{{taza.pedido_id}}</td>
+            <td>{{taza.pedido_id}}
+            </td>
             <td>{{taza.cantidadPiezas}}</td>
             <td>{{taza.tipoTaza_id}}</td>
             <td>{{taza.tipotaza}}</td>
